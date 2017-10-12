@@ -1,0 +1,190 @@
+/* Style the navbar */
+* {
+    box-sizing: border-box;
+}
+
+body,html {
+    height: 100%;
+    position:relative;
+    font-family: 'Work Sans', sans-serif; /*'Rubik', sans-serif; */
+    background-color: #000;
+    color:#fff;
+    /* font-family: 'Work Sans', sans-serif; */
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+#container {
+    clear:both;
+    position:relative;
+    height:100%;
+	width:100%;
+}
+section {
+    position:relative;
+    margin:auto;
+    padding: 5% 10%;
+}
+.title {
+    float:right;
+}
+.tag { 
+    width: 100%;
+    padding:3% 2%;
+    letter-spacing: 10px;
+    background-color: #000;
+    color: #fff;
+    text-align:center;
+    margin: 5%;
+}
+#home >.hero-text {
+    left: 25%;
+}
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.gallery {
+	width: auto;
+	min-height: 100%;
+}
+.gallery-link {
+	color: #ffffff;
+}
+.name {
+	position:absolute;
+	left:0;
+	top:60%;
+	width:100%;
+	padding: 7% 0 7% 0;
+	text-align:center;
+	font-size:1em;
+	background-color: #4aaaa5;
+	color:white;
+	/* font-family: Georgia, Times, "Times New Roman", serif; */
+}
+a {
+	text-decoration: none;
+}
+.text {
+	position:relative;
+	left:11px;
+	width: auto;
+    margin: 2% 4% 4% 1%;
+    display: inline-block;
+}
+.text:hover .portfolio-content {
+    opacity:1;
+    /* display:block; */
+}
+.text:hover .portfolio-header {
+    top:0%;
+    transition: .5s ease;
+}
+
+.portfolio-content {
+    /* display: none; */
+    position:absolute;
+    top: 30%;
+    height:70%;
+    opacity:0;
+    transition: 1s ease;
+    width:100%;
+	padding: 7% 0 7% 0;
+	text-align:center;
+	font-size:1em;
+	background-color: white;
+	color:#4aaaa5;
+	/* font-family: Georgia, Times, "Times New Roman", serif; */
+}
+
+/* .portfolio-header:hover > .portfolio-content {
+    display:block;  
+} */
+
+/* .portfolio-header:hover {
+    top: 0%;
+    height:100%;
+} */
+.bgimg-1,.bgimg-2,.bgimg-3 {
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bgimg-1 {
+    /* The image used */
+    background-image: url('../images/headshot_noir.jpg');
+    /* Full height */
+    height: 94%; 
+}
+.bgimg-2 {
+    background-image: url("../images/small_fall.jpg");
+    min-height: 400px;
+}
+.bgimg-3 {
+    background-image: url("../images/range.jpg");
+    min-height: 400px;
+}
+#profile {
+    height:auto;
+    max-width: 100%;
+    /* border-radius: 50% */ */
+}
+.opacity {
+    opacity: 0.75;
+}
+header {
+    /* background-color: #f1f1f1; */
+    padding: 30px;
+    text-align: center;
+}
+
+#navbar {
+    overflow: hidden;
+    background-color: #333;
+    color:#fff;
+    z-index:100;
+}
+  
+  /* Navbar links */
+#navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+  
+  /* Page content */
+.content {
+    padding: 16px;
+}
+  
+  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+    padding-top: 60px;
+}
+
+@media only screen and (max-device-width: 1024px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+}
+/* 
+https://www.w3schools.com/howto/howto_css_fixed_menu.asp
+https://www.w3schools.com/howto/howto_js_navbar_sticky.asp
+https://www.w3schools.com/jsref/prop_element_scrolltop.asp */
