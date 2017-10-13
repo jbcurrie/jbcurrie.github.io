@@ -2,161 +2,95 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial scale=1.0"> <!--viewport settings-->
-		<title>Portfolio</title>
+		<title>About Me</title>
 		<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-		<!-- <link rel="stylesheet" type="text/css" href="assets\bootstrap\css\bootstrap-grid.min.css"> -->
-		<link href="https://fonts.googleapis.com/css?family=Rubik|Work+Sans" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="assets/css/style2.css">	
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		<meta name="viewport" content="width=device-width, initial scale=1.0"> <!--viewport settings-->
 	</head>
 		<body>
-			<header class="bgimg-1 opacity" id="home">
-				<!-- background image begin parralax effect -->
-				<!-- CENTER OR OFFSET TITLE, CREATE A DIV WITH BOX SIZING LIKE TEMPLATE -->
-				<div class="hero-text">
-					<h1 id="name" class="tag">Jonathan Currie</h1>
-					<h2 class="tag">Web Developer</h2>
-				</div>
+			<header>
+				<h1 id="name">Jonathan Currie</h1>
+				<nav>
+					<div class="nav">
+						<div class="nav about">
+							<a href="index.html">About</a>
+						</div>
+						<div class="nav portfolio">
+							<a href="portfolio.html">Portfolio</a>
+						</div>
+						<div class="nav contact">
+							<a href="contact.html">Contact</a>
+						</div>
+					</div>
+				</nav>
 			</header>
-			<div class="nav" id="navbar">
-				<!-- ADD FONT AWESOME ICONS BESIDE MENU ELEMS
-				CREATE HAMBURGER MENU ON SMALLER SCREENS -->
-				<div class="nav about">
-					<a href="#about">About</a>
-				</div>
-				<div class="nav portfolio">
-					<a href="#portfolio">Portfolio</a>
-				</div>
-				<div class="nav contact">
-					<a href="#contact">Contact</a>
-				</div>
-				<div class="nav resume">
-					<a href="#">Resume</a>
-				</div>
-				<div class="nav title">
-					<a href="#home">Jonathan Currie</a>
-				</div>
-			</div>
 			<div class="clearfix">
 				<div id="container">
-					<section id="about">
-						<!-- ADD PERSONAL DESCRIPTIION ADD SKILLS WITH ICONS -->
-						<h1>About Me</h1>
-						<!-- <img id="profile" src="assets/images/headshot.jpg" alt="profile pic"> -->
+					<section>
+						<h2>About Me</h2>
+
+						<hr id="hr-1">
+
+						<img id="profile" src="assets/images/31.jpg" alt="profile pic">
+
 						<p id="about"> I was born and raised in the beautiful state of North Carolina. As a kid, I would always brag about North Carolina's trifecta of the ancient Appalachian Mountain chain, the rolling hills and farmlands of the Piedmont, and the picturesque coastal plains. I enjoy all that our state has to offer as often as I can.  
 						</p>
 						<p id="about"> I'm an avid learner and lifelong student. I attended David W. Butler High School, followed by the University of Chicago; upon graduation, I lived in the Windy City for a few years to work with local communities on social organizing campaigns. After a few years of hard work and unforgettable experiences, I made the decision to move back to my homestate and to look into a career in tech. 
 						</p>
 						<p id="about"> I certainly look forward to working with you all, and if you ever need a hiking buddy, give me a ring!</p>
-						<h3>skills</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae semper lorem. Nullam vehicula lorem dapibus nunc commodo tincidunt. Ut elementum, leo ac accumsan pharetra, ex eros molestie magna, id venenatis nulla tellus bibendum nulla. Mauris varius eros non velit efficitur mattis. Aenean accumsan metus id molestie porta. Pellentesque vitae tempus augue, sed imperdiet urna. Integer vel odio non dolor vulputate tristique. Morbi sagittis neque ex, tincidunt ornare quam dignissim eget. Aliquam congue posuere dolor, eu dignissim turpis lobortis sed. Fusce vehicula gravida viverra. Vestibulum pulvinar tellus ut leo tristique, id porta urna gravida.
-						</p>
 					</section>
-					<section class="bgimg-2 opacity">
-						<div class="hero-text">
-							<h1 class="section tag">PORTFOLIO</h1>
+					<aside>
+						<h3>Connect With Me	</h3>
+						<hr id="hr-2">
+						<div id="icons">
+							<a href="#">
+									<img class="icon git" src="assets/images/github.png" alt="Github">
+							</a>
+							<a href="#">
+									<img class="icon linked" src="assets/images/linkedin.png" alt="LinkedIn">
+							</a>
+							<a href="#">
+									<img class="icon overflow" src="assets/images/overflow.png" alt="Stack Overflow">
+							</a>
 						</div>
-					</section>
-					<section id="portfolio">
-						<!-- yumyumlog
-						travelbear
-						hangman
-						bamazon
-						friendlink
-						burgereater
-
-						nice to haves
-						giphy
-						rpg
-						liri node app -->
+					</aside>
+					<section>
 						<h2>Portfolio</h2>
-						<!-- INSERT SCREENSHOTS AND DESCRIPTIONS
-						CHANGE TITLE HEADER, THINNER PADDING
-						CHANGE BUTTON COLORS (MAYBE ORANGE OR DEEPER BLUE) -->
 						<hr id="hr-1">
 						<div class="section">
 							<div class="text">
 								<img class="gallery" src="https://media.giphy.com/media/xT9Igf4JZlCoOFzNVS/giphy.gif" alt="hangman">
-								<header class="name portfolio-header">
-									<h2 class="gallery-link">Hangman</h2>
-								</header>
-								<div class="portfolio-content">
-									<p>Classic game in JavaScript</p>
-									<a href="#">GitHub Repo</a>
-									<a href="#">Demo Link</a>
+								<div class="name">
+									<a class="gallery-link" href="https://jbcurrie.github.io/Charlotte_Hangman/index3.html">Hangman</a>
 								</div>
 							</div>
 							<div class="text">
-								<img class="gallery" src="assets/images/placeholder.png" style="width:480px;height:248px;" alt="rpg game">
-								<header class="name portfolio-header">
-									<h2 class="gallery-link">TRAVEL<strong>BEAR</strong></h2>
-								</header>
-								<div class="portfolio-content">
-									<p>...details</p>
-									<a href="#">GitHub Repo</a>
-									<a href="#">Demo Link</a>
+								<img class="gallery" src="assets/images/placeholder.png" alt="rpg game">
+								<div class="name">
+									<a class="gallery-link" href="#">rpg game</a>
 								</div>
 							</div>
 							<div class="text">
-								<img class="gallery" src="assets/images/placeholder.png" style="width:480px;height:248px;" alt="Trivia game">
-								<header class="name portfolio-header">
-									<h2 class="gallery-link">YUM YUM LOG</h2>
-								</header>
-								<div class="portfolio-content">
-									<p>...details</p>
-									<a href="#">GitHub Repo</a>
-									<a href="#">Demo Link</a>
+								<img class="gallery" src="assets/images/placeholder.png" alt="Trivia game">
+								<div class="name">
+									<a class="gallery-link" href="#">Trivia game</a>
 								</div>
 							</div>
 							<div class="text">
-								<img class="gallery" src="assets/images/placeholder.png" style="width:480px;height:248px;" alt="Rutgers Info Widget">
-								<header class="name portfolio-header">
-									<h2 class="gallery-link">BURGER EATER</h2>
-								</header>
-								<div class="portfolio-content">
-									<p>...details</p>
-									<a href="#">GitHub Repo</a>
-									<a href="#">Demo Link</a>
+								<img class="gallery" src="assets/images/placeholder.png" alt="Rutgers Info Widget">
+								<div class="name">
+									<a class="gallery-link" href="#">Rutgers Info Widget</a>
 								</div>
 							</div>
 							<div class="text">
-								<img class="gallery" src="assets/images/placeholder.png" style="width:480px;height:248px;" alt="Rock Paper Scissors">
-								<header class="name portfolio-header">
-									<h2 class="gallery-link">FRIEND LINK</h2>
-								</header>
-								<div class="portfolio-content">
-									<p>...details</p>
-									<a href="#">GitHub Repo</a>
-									<a href="#">Demo Link</a>
-								</div>
-							</div>
-							<div class="text">
-								<img class="gallery" src="assets/images/placeholder.png" style="width:480px;height:248px;" alt="Rock Paper Scissors">
-								<header class="name portfolio-header">
-									<h2 class="gallery-link">BAMAZON</h2>
-								</header>
-								<div class="portfolio-content">
-									<p>...details</p>
-									<a href="#">GitHub Repo</a>
-									<a href="#">Demo Link</a>
+								<img class="gallery" src="assets/images/placeholder.png" alt="Rock Paper Scissors">
+								<div class="name">
+									<a class="gallery-link" href="#">Rock Paper Scissors</a>
 								</div>
 							</div>
 						</div>
 					</section>
 					<section>
-						<div>
-							<button style="margin-top:64px">LOAD MORE</button>
-							<!-- HIDE ADDITIONAL SECTIONS, ON CLICK SHOW THIS SECTION -->
-							<!-- REPLACE LOAD MORE WITH SEE LESS BUTTON -->
-						</div>
-					</section>
-					<section class="bgimg-3 opacity">
-						<div class="hero-text">
-							<h1 class="section tag">CONTACT</h1>
-						</div>
-					</section>
-					<section id="contact"> 
-						<!-- REMOVE EMAIL CONTACT SECTION -->
 						<h2>Contact</h2>
 						<hr id="hr-1">	
 						<fieldset>
@@ -180,33 +114,22 @@
 						</form>
 						<br>
 					</section>
-					<aside>
-						<h3>Connect With Me	</h3>
-						<!-- ADD FONT AWESOME ICONS, OR BUTTONS ANCHOR TAGS TO SOCIAL MEDIA -->
-						<hr id="hr-2">
-						<div id="icons">
-							<a href="#">
-									<img class="icon git" src="assets/images/github.png" alt="Github">
-							</a>
-							<a href="#">
-									<img class="icon linked" src="assets/images/linkedin.png" alt="LinkedIn">
-							</a>
-							<a href="#">
-									<img class="icon overflow" src="assets/images/overflow.png" alt="Stack Overflow">
-							</a>
-						</div>
-					</aside>
 				</div>
 			</div>
-			<footer class="footer">
-				<!-- IS THE FOOTER STICKY? -->
-				<div>
-					<div class="row">
-						<h2>© Copyright 2016 Jonathan Currie</h2>
-					</div>
-				</div> 
-			</footer>
-		<!-- <script src="./assets/bootstrap/js/bootstrap.min.js"></script> -->
-		<script src="./assets/javascript/script.js"></script>
+			<footer class="footer">© Copyright 2016 Jonathan Currie</footer>
 		</body>
 </html>
+<!-- FIXED NAV BAR -->
+		<!-- HEADER MENU BUTTON POINT TO SECTIONS ON PAGE -->
+			<!-- NAV BAR ON MOBILE IS A HAMBURGER MENU (ONLY DISPLAYS ON SMALLER SCREENS) -->
+<!-- SOCIAL AND PROFESSIONAL LINKS STAY WITH CONTENT SCROLL ON LARGE SCREENS-->
+		<!-- ON SMALLER SCREENS, FIXED TO BOTTOM OF SCREEN -->
+<!-- A BUTTON THAT ALLOWS YOU TO SCROLL TO TO THE TOP AUTOMATICALLY -->
+<!-- PROJECTS SECTION -->
+		<!-- CHANGE TO A CARD, WITH DESCRIPTION, TECHNOLOGIES AND LINKS -->
+<!--ABOUT ME SECTION-->
+	<!-- UPDATE YOUR PROFILE DESCRIPTION -->
+	<!-- CHANGE PROF PIC -->
+<!-- DESIGN -->
+		<!-- WHAT COLORS WOULD MAKE THE PAGE MORE MODERN/PERSONAL -->
+		<!-- CAN I FADE IN CONTENT? -->

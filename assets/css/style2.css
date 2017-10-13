@@ -11,6 +11,14 @@ body,html {
     color:#fff;
     /* font-family: 'Work Sans', sans-serif; */
 }
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+    margin: 10px 0;
+}
+p {
+    line-height: 2em;
+    margin: 1%;
+}
 .clearfix::after {
     content: "";
     clear: both;
@@ -25,20 +33,25 @@ body,html {
 section {
     position:relative;
     margin:auto;
+    text-align: center;
     padding: 5% 10%;
+    overflow: auto;
 }
 .title {
     float:right;
 }
 .tag { 
     width: 100%;
-    padding:3% 2%;
+    padding:12px 24px;
     letter-spacing: 10px;
     background-color: #000;
     color: #fff;
     text-align:center;
-    margin: 5%;
+    margin: 10px 10px;
 }
+/* section .tag {
+    margin:0
+} */
 #home >.hero-text {
     left: 25%;
 }
@@ -48,37 +61,46 @@ section {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.div-skills {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 0 8px;
+    width: 33.33333%;
+}
 .gallery {
-	width: auto;
-	min-height: 100%;
+    width:480px;height:248px;
+	/* width: 100%;
+	min-height: 100%; */
 }
 .gallery-link {
 	color: #ffffff;
 }
 .name {
-	position:absolute;
+    position:absolute;
+    letter-spacing: 10px;
 	left:0;
 	top:60%;
 	width:100%;
-	padding: 7% 0 7% 0;
+	padding: 1% 0;
 	text-align:center;
 	font-size:1em;
 	background-color: #4aaaa5;
 	color:white;
-	/* font-family: Georgia, Times, "Times New Roman", serif; */
 }
 a {
 	text-decoration: none;
 }
 .text {
 	position:relative;
-	left:11px;
 	width: auto;
-    margin: 2% 4% 4% 1%;
+    margin: 1%;
     display: inline-block;
+    /* cursor: pointer; */
 }
 .text:hover .portfolio-content {
     opacity:1;
+    overflow: auto;
     /* display:block; */
 }
 .text:hover .portfolio-header {
@@ -89,27 +111,17 @@ a {
 .portfolio-content {
     /* display: none; */
     position:absolute;
-    top: 30%;
-    height:70%;
+    top: 20%;
+    height:80%;
     opacity:0;
     transition: 1s ease;
     width:100%;
-	padding: 7% 0 7% 0;
+	padding: 1%;
 	text-align:center;
 	font-size:1em;
 	background-color: white;
 	color:#4aaaa5;
-	/* font-family: Georgia, Times, "Times New Roman", serif; */
 }
-
-/* .portfolio-header:hover > .portfolio-content {
-    display:block;  
-} */
-
-/* .portfolio-header:hover {
-    top: 0%;
-    height:100%;
-} */
 .bgimg-1,.bgimg-2,.bgimg-3 {
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -134,15 +146,10 @@ a {
 #profile {
     height:auto;
     max-width: 100%;
-    /* border-radius: 50% */ */
+    /* border-radius: 50% */
 }
 .opacity {
     opacity: 0.75;
-}
-header {
-    /* background-color: #f1f1f1; */
-    padding: 30px;
-    text-align: center;
 }
 
 #navbar {
@@ -151,7 +158,6 @@ header {
     color:#fff;
     z-index:100;
 }
-  
   /* Navbar links */
 #navbar a {
     float: left;
@@ -161,28 +167,127 @@ header {
     padding: 14px;
     text-decoration: none;
 }
-  
+.topNav#navbar .hamb {
+    display: none;
+}
   /* Page content */
 .content {
     padding: 16px;
 }
-  
   /* The sticky class is added to the navbar with JS when it reaches its scroll position */
 .sticky {
     position: fixed;
     top: 0;
     width: 100%
-}
-  
+} 
   /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
 .sticky + .content {
     padding-top: 60px;
 }
+#icons>a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 0 8px;
+    width: 33.33333%;
+}
 
-@media only screen and (max-device-width: 1024px) {
-    .parallax {
+#icons #github {
+    color: #6e5494;
+}
+
+#icons #overflow {
+    color: #f48024;
+}
+a:hover {
+    background: #4aaaa5;
+    opacity: 0.8;
+} 
+#icons a:hover {
+    background: rgba(0, 0, 0, 0.0)
+}
+.footer {
+    text-align: center;
+}
+#btn-scroll {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: rgba(0,0,0,0.0); /* Set a background color */
+    color: #fff; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+     /* Rounded corners */
+}
+.button {
+    background-color: #fff;; /* Green */
+    border: none;
+    color: #4aaaa5;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 1%;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #4aaaa5;
+    color: white;
+}
+@media only screen and (max-width: 1024px) {
+    /* .parallax {
         background-attachment: scroll;
+    } */
+    #name.tag {
+        transform:scale(0.5,0.5);
     }
+}
+
+@media only screen and (max-width: 640px) and (orientation:portrait) {
+    #navbar div:not(:last-child) {display: none;}
+    .topNav#navbar .hamb {
+      float: left;
+      display: block;
+    }
+    .topNav#navbar.responsive {
+        position: fixed;
+        top:0;
+        width:100%
+    }
+    .topNav#navbar.responsive .hamb {
+      position: fixed;
+      right: 0;
+      top: 0;
+    }
+    .topNav#navbar.responsive div.nav {
+      float: none;
+      display: flex;
+      text-align: left;
+    }
+    .div-skills {
+        width: 100%;
+    }
+	.text {
+        width: 100%;
+        margin: 5% 0%;
+	}
+
+	.gallery {
+		width: 100%;
+		height: 100%;
+    }
+    .name {
+		max-width: 100%;
+	}
 }
 /* 
 https://www.w3schools.com/howto/howto_css_fixed_menu.asp
