@@ -3,6 +3,7 @@ var navbar = document.getElementById("navbar");
 var body = document.getElementsByTagName("body");
 // Get the offset position of the navbar
 var sticky = navbar.offsetTop;
+var text = document.getElementsByClassName("text");
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 
 function myFunction() {
@@ -31,7 +32,6 @@ function topFunction() {
 
 function hamburger() {
     var x = document.getElementById("navbar");
-    console.log(this)
     if (x.className === "topNav sticky") {
         x.className += " responsive";
     } else {
@@ -39,7 +39,25 @@ function hamburger() {
     }
 }
 
+function runAnimate (e) {
+    var target = e.currentTarget
+    var content = target.getElementsByClassName("portfolio-content")[0];
+    var header = target.getElementsByClassName("name")[0];
+    if (content.className === "portfolio-content") {
+        content.classList += " content-transition"
+        header.classList += " header-transition"
+    } else {
+        content.className = "portfolio-content"
+        header.className = "name"
+    }
+}
+function galleryAnimate (e) {
+    for (i = 0; i < text.length; i++) {
+        text[i].addEventListener("click",runAnimate,false);
+    }
+}
 
 window.onscroll = function() {scrollFunction()};
 document.addEventListener("scroll", myFunction);
 navbar.addEventListener("click",hamburger);
+galleryAnimate();
