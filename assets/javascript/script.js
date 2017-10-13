@@ -31,6 +31,7 @@ function topFunction() {
 
 function hamburger() {
     var x = document.getElementById("navbar");
+    console.log(this)
     if (x.className === "topNav sticky") {
         x.className += " responsive";
     } else {
@@ -41,4 +42,4 @@ function hamburger() {
 
 window.onscroll = function() {scrollFunction()};
 document.addEventListener("scroll", myFunction);
-document.addEventListener("click",hamburger);
+navbar.addEventListener("click",hamburger);
