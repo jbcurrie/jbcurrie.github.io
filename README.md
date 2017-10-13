@@ -1,3 +1,2 @@
-# ![](https://jbcurrie.github.io/)
+# [Check out my portfolio!](https://jbcurrie.github.io/)
 
-Check out my portfolio.
