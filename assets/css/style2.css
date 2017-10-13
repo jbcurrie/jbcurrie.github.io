@@ -17,7 +17,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 p {
     line-height: 2em;
-    margin: 7% 0%;
+    margin: 4% 0%;
 }
 i {
     margin: 3% 0%;
@@ -45,7 +45,7 @@ section {
 }
 .tag { 
     width: 100%;
-    padding:12px 24px;
+    padding:12px;
     letter-spacing: 10px;
     background-color: #000;
     color: #fff;
@@ -65,9 +65,11 @@ section {
     float: left;
     display: block;
     text-align: center;
-    /* padding: 0 8px; */
+    padding: 8px;
     width: 33.33333%;
     margin: 5% 0%;
+    height:300px;
+    border:solid;
 }
 .gallery {
     width:480px;height:248px;
