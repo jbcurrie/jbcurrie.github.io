@@ -8,6 +8,7 @@ body,html {
     font-family: 'Work Sans', sans-serif; 
     background-color: #000;
     color:#fff;
+	scroll-behavior: smooth;
     /*'Rubik', sans-serif; */
 }
 h1, h2, h3, h4, h5, h6 {
