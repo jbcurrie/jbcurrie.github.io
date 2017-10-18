@@ -11,6 +11,7 @@ body,html {
 	scroll-behavior: smooth;
     /*'Rubik', sans-serif; */
 }
+
 h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
     margin: 10px 0;
@@ -67,9 +68,13 @@ section {
     text-align: center;
     padding: 8px;
     width: 33.33333%;
-    margin: 5% 0%;
+    margin: 4% 0%;
     height:300px;
     border:solid;
+}
+.div-skills:nth-of-type(2) {
+    border-left: none;
+    border-right: none;
 }
 .gallery {
     width:480px;height:248px;
@@ -92,7 +97,7 @@ section {
 	color:white;
 }
 a {
-	text-decoration: none;
+    text-decoration: none;
 }
 .text {
 	position:relative;
@@ -148,6 +153,9 @@ a {
     background-image: url("../images/range.jpg");
     min-height: 400px;
 }
+.favicon {
+    border-radius: 50%;
+}
 #profile {
     height:auto;
     max-width: 100%;
@@ -160,6 +168,7 @@ a {
     background-color: #333;
     color:#fff;
     z-index:100;
+    max-height:44px;
 }
   /* Navbar links */
 #navbar a {
@@ -219,6 +228,9 @@ a:hover {
     color: #fff; 
     cursor: pointer; 
     padding: 15px;
+}
+#btn-scroll:hover {
+    color:#4aaaa5;
 }
 .button {
     background-color: #fff;; 
@@ -280,6 +292,9 @@ a:hover {
 }
 
 @media only screen and (max-width: 768px) and (orientation: landscape) {
+    #navbar {
+        max-height:100%
+    }
     .bgimg-1,.bgimg-2,.bgimg-3 {
         background-attachment: scroll;
     }
@@ -293,6 +308,10 @@ a:hover {
     .div-skills {
         width: 100%;
     }
+    .div-skills:nth-of-type(2) {
+        border-left: solid;
+        border-right: solid;
+    }
 	.text {
         width: 100%;
         margin: 7% 0%;
@@ -304,9 +323,15 @@ a:hover {
     }
     .name {
 		max-width: 100%;
-	}
+    }
+    /* #btn-scroll {
+        right: 20px; 
+    } */
 }
 @media only screen and (max-width: 768px) and (orientation:portrait) {
+    #navbar {
+        max-height:100%
+    }
     .bgimg-1,.bgimg-2,.bgimg-3 {
         background-attachment: scroll;
     }
@@ -345,5 +370,11 @@ a:hover {
     }
     .name {
 		max-width: 100%;
-	}
+    }
+    .div-skills:nth-of-type(2) {
+        border-left: solid;
+        border-right: solid;
+    }
 }
+
+/* image vector: https://vectormagic.com/images/1939087/khlejhhpoqidj1m0uuilm8kffl5goofl4smk7g0f4vi4f8ltlp8d */
