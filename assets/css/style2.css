@@ -43,7 +43,7 @@ section {
     margin:auto;
     text-align: center;
     padding: 5% 10%;
-    overflow: auto;
+    overflow: hidden;
 }
 .title {
     float:right;
@@ -306,8 +306,8 @@ a:hover {
         height: 90%;
     }
     .portfolio-content {
-        top: 18%;
-        height:82%;
+        top: 16%;
+        height:84%;
     }
     .div-skills {
         width: 100%;
@@ -374,6 +374,10 @@ a:hover {
     }
     .name {
 		max-width: 100%;
+    }
+    .portfolio-content {
+        top: 0%;
+        height:100%;
     }
     .div-skills:nth-of-type(2) {
         border-left: solid;
