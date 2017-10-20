@@ -20,6 +20,10 @@ p {
     line-height: 2em;
     margin: 4% 0%;
 }
+.portfolio-content p {
+    line-height: 1.6em;
+    margin: 2% 0%;
+}
 i {
     margin: 3% 0%;
 }
