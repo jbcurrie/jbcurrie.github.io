@@ -28,13 +28,15 @@ function topFunction() {
 function hamburger() {
     const navbar = document.getElementById("navbar");
     const addTimes = document.getElementsByClassName('hamburger')[0]
-    
+
     if (navbar.className === "topNav sticky") {
         navbar.className += " responsive";
+        document.body.classList += 'responsive'
         addTimes.innerHTML = '&times;'
     } else {
         navbar.className = "topNav";
-      addTimes.innerHTML = '&#9776;'
+        addTimes.innerHTML = '&#9776;'
+        document.body.classList.remove('responsive')
     }
 }
 // animate portfolios
