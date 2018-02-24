@@ -208,7 +208,7 @@ a {
 #icons #overflow {
     color: #f48024;
 }
-#navbar a div:hover {
+#navbar a:hover {
     color: #4aaaa5;
     /* opacity: 0.8; */
 } 
