@@ -172,6 +172,7 @@ a {
     background-color: #333;
     z-index:100;
     max-height:44px;
+    cursor: pointer;
 }
   /* Navbar links */
 #navbar a {
@@ -179,6 +180,13 @@ a {
     color: #f2f2f2;
     padding: 14px;
     text-decoration: none;
+}
+#navbar a:last-child {
+    float:right;
+    pointer-events: none;
+}
+#navbar.responsive a:last-child {
+    pointer-events:inherit;
 }
 .topNav#navbar .hamb {
     display: none;
@@ -360,8 +368,6 @@ a {
       display: block;
       /* text-align: center; */
       min-width: 100%;
-      padding: 20px 38px;
-      margin: 10px 20px;
     }
     .topNav#navbar.responsive .hamb{
       position: absolute;
