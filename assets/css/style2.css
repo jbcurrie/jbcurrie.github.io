@@ -191,6 +191,9 @@ a {
 .topNav#navbar .hamb {
     display: none;
 }
+.responsive .menu-item {
+    margin-left:25%;
+}
 .content {
     padding: 16px;
 }
