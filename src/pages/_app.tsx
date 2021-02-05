@@ -3,11 +3,17 @@ import App from 'next/app'
 // import Link from 'next/link'
 import '../styles/reset.css'
 import '../styles/main.css'
+import { ThemeProvider } from '@emotion/react'
+import { theme } from '../theme'
 
 class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props
-    return <Component {...pageProps} />
+    return (
+      <ThemeProvider theme={theme}>
+        <Component {...pageProps} />
+      </ThemeProvider>
+    )
   }
 }
 
