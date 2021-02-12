@@ -18,6 +18,12 @@ const theme: Theme = {
   transition: {
     all: 'all .3s',
   },
+  mq: {
+    xsmall: '@media (max-width: 576px)',
+    small: '@media (max-width: 768px)',
+    medium: '@media (max-width: 992px)',
+    large: '@media (min-width: 1200px)'
+  }
 }
 
 export default theme
