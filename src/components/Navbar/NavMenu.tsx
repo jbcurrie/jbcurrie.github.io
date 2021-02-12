@@ -1,9 +1,10 @@
 import styled from '@emotion/styled'
-import { FC, useState } from 'react'
+import { FC } from 'react'
 import { NavButton } from '.'
 import useMediaQuery from '../../hooks/useMediaQuery'
 import { FiMenu, FiX } from 'react-icons/fi'
-import { css, Theme } from '@emotion/react'
+import { css } from '@emotion/react'
+
 interface NavMenuProps {
   className?: string
   isExpanded: boolean
@@ -12,7 +13,7 @@ interface NavMenuProps {
 const NavMenu: FC<NavMenuProps> = ({ className, children, isExpanded, onExpand}) => {
   const isSmallScreen = useMediaQuery()
   return (
-    <div
+    <Wrapper
       className={className}
       css={isSmallScreen ? smallScreenStyles(isExpanded) : css``}
     >
@@ -26,7 +27,7 @@ const NavMenu: FC<NavMenuProps> = ({ className, children, isExpanded, onExpand})
         </NavButton>
       ) : null}
       {children}
-    </div>
+    </Wrapper>
   )
 }
 
@@ -34,6 +35,10 @@ export default styled(NavMenu)`
   display: flex;
   justify-content: space-evenly;
   flex: 1;
+`
+
+const Wrapper= styled.div`
+  
 `
 const smallScreenStyles = (isExpanded: boolean) => css`
   ${isExpanded

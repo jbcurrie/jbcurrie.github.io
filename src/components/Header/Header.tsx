@@ -1,9 +1,8 @@
 import { FC } from 'react'
-
 import styled from '@emotion/styled'
-import { css } from '@emotion/react'
 import Image from 'next/image'
 import HeroCard from './HeroCard'
+
 interface HeaderProps {
   className?: string
 }

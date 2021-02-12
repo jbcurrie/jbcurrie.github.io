@@ -17,7 +17,7 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint', 'react-hooks'],
+  plugins: ['react', '@typescript-eslint', 'react-hooks', '@emotion'],
   rules: {
     eqeqeq: 0,
     '@typescript-eslint/explicit-module-boundary-types': 0,

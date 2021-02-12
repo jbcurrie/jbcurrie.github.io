@@ -4,7 +4,6 @@ import { FC, useState } from 'react'
 import { NavLink } from '.'
 import { FaUserAstronaut, FaTh, FaEnvelope } from 'react-icons/fa'
 import useMediaQuery from '../../hooks/useMediaQuery'
-import { css } from '@emotion/react'
 import NavMenu from './NavMenu'
 interface NavbarProps {
   className?: string
