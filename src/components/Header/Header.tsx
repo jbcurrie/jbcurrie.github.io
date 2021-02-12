@@ -11,10 +11,10 @@ const Header: FC<HeaderProps> = ({ className }) => {
   return (
     <header className={className}>
       <Image
-        src='/headshot_noir.jpg'
+        src="/headshot_noir.jpg"
         alt="Jonathan's Headshot"
         layout={'fill'}
-        objectFit='cover'
+        objectFit="cover"
         quality={100}
         priority={true}
       />
@@ -23,8 +23,4 @@ const Header: FC<HeaderProps> = ({ className }) => {
   )
 }
 
-export default styled(Header)`
-  img {
-    opacity: 0.75;
-  }
-`
+export default styled(Header)``
