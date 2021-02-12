@@ -19,5 +19,11 @@ declare module '@emotion/react' {
     transition: {
       all: string
     }
+    mq: {
+      xsmall: string,
+      small: string,
+      medium: string,
+      large: string
+    }
   }
 }

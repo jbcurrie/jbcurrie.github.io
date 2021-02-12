@@ -1,11 +1,13 @@
 import styled from '@emotion/styled'
+import { GetServerSideProps, InferGetServerSidePropsType } from 'next'
 import { Navbar } from '../components/Navbar'
+import { useMediaQuery } from '../hooks'
 
-interface HomeProps {
-  className?: string
-}
 
-function Home({ className }: HomeProps) {
+
+function Home({ className ,userAgent}: InferGetServerSidePropsType<typeof getServerSideProps>) {
+  console.log(userAgent)
+  const isSmallScreen = useMediaQuery('768', userAgent)
   return (
     <div className={className}>
       <Navbar />
@@ -26,3 +28,14 @@ export default styled(Home)`
     'main main';
   grid-template-rows: 60px 1fr;
 `
+/**
+ * server side props
+ */
+
+ export const getServerSideProps: GetServerSideProps = async ({req}) => {
+   return {
+     props: {
+       userAgent: req.headers['user-agent']
+     }
+   }
+ }
