@@ -10,16 +10,36 @@ const Header: FC<HeaderProps> = ({ className }) => {
   return (
     <header className={className}>
       <Image
-        src="/headshot_noir.jpg"
+        src="/portrait.png"
         alt="Jonathan's Headshot"
         layout={'fill'}
-        objectFit="cover"
-        quality={100}
-        priority={true}
+        objectFit={'cover'}
       />
-      <HeroCard title={'Jonathan Currie'} subtitle={'Web Developer'} />
     </header>
   )
 }
 
-export default styled(Header)``
+export default styled(Header)`
+  display:flex;
+  flex: 1;
+  position: relative;
+  ${({theme}) => `
+    ${theme.mq.small} {
+      flex: 2;
+    }
+  `}
+  > div {
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0.6;
+      background: ${({ theme }) =>
+        `linear-gradient(180deg, transparent 0%, ${theme.color.blue[600]} 98.96%)`};
+    }
+  }
+`

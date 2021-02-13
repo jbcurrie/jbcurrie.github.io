@@ -9,6 +9,7 @@ interface NavLinkProps {
   className?: string
   title: string
   href?: string
+  shouldHighlight?: boolean
   onClick: (e:React.MouseEvent<HTMLButtonElement>) => void
 }
 const NavLink: FC<NavLinkProps> = ({
@@ -16,12 +17,13 @@ const NavLink: FC<NavLinkProps> = ({
   title,
   children,
   href,
+  shouldHighlight = true,
   onClick
 }) => {
   const router = useRouter()
   return (
-    <Link href={href} passHref>
-      <NavButton isActive={router.asPath.includes(href)} onClick={onClick}>
+    <Link href={href} passHref scroll={false}>
+      <NavButton isActive={router.asPath.includes(href)} onClick={onClick} shouldHighlight={shouldHighlight}>
         {children}
         <A className={className}>
           <H2>{title}</H2>

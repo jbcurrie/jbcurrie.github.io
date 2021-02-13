@@ -9,6 +9,9 @@ declare module '@emotion/react' {
       white: {
         100: string
       }
+      grey: {
+        100: string
+      }
       blue: {
         400: string
         500: string

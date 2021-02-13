@@ -20,6 +20,7 @@ const NavMenu: FC<NavMenuProps> = ({
     <div className={className}>
       <NavButton
         onClick={() => onExpand(!isExpanded)}
+        shouldHighlight={false}
         css={(theme) => menuButtonCss(theme, isExpanded)}
       >
         {isExpanded ? (
@@ -46,7 +47,7 @@ export default styled(NavMenu)`
         flex-direction: column;
         top: 0;
         bottom: 0;
-        right: 24px;
+        right: 0;
         width: calc(100vw/2);
         height: 100vh;
         transition: ${theme.transition.all};
@@ -74,6 +75,7 @@ const menuButtonCss = (theme: Theme, isExpanded: boolean) => css`
     display: flex;
     ${isExpanded
       ? `
+      margin-right: 24px;
       flex: 0 0 60px;
       justify-content: flex-end;
     `
