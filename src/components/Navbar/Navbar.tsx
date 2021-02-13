@@ -23,15 +23,15 @@ const Navbar: FC<NavbarProps> = ({ className, activeTab }) => {
       >
         <NavLink
           onClick={(e) => setIsExpanded(false)}
-          title={isExpanded ? 'JC' : 'Jonathan Currie'}
+          title={'JC'}
           href={'/#home'}
+          shouldHighlight={false}
         >
           <ImageWrapper>
             <Image
               src={'/portrait.png'}
               layout={'fill'}
               objectFit={'cover'}
-              quality={75}
             />
           </ImageWrapper>
         </NavLink>
@@ -64,13 +64,14 @@ const Navbar: FC<NavbarProps> = ({ className, activeTab }) => {
 }
 
 export default styled(Navbar)`
-  grid-area: nav;
   display: flex;
   justify-content: center;
   align-items: center;
   position: sticky;
+  top: 0;
   background: ${({ theme }) => theme.color.blue[700]};
   padding: 0 24px;
+  z-index: 1;
 `
 
 const ImageWrapper = styled.div`

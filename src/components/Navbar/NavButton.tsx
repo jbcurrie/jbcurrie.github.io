@@ -1,7 +1,9 @@
-import styled from "@emotion/styled"
+import styled from '@emotion/styled'
 
 export interface NavButtonProps {
   isActive?: boolean
+  shouldHighlight?: boolean
+  className?: string
 }
 
 const NavButton = styled.button<NavButtonProps>`
@@ -14,6 +16,10 @@ const NavButton = styled.button<NavButtonProps>`
   background: ${({ theme, isActive }) =>
     isActive ? theme.color.blue[500] : theme.color.blue[700]};
   border: none;
+  svg,
+  img {
+    margin-right: 16px;
+  }
   &:hover {
     background: ${({ theme }) => theme.color.blue[600]};
   }
@@ -26,14 +32,16 @@ const NavButton = styled.button<NavButtonProps>`
     transition: width 0.3s;
     background: ${({ theme }) => theme.color.white[100]};
   }
-  &:hover::after {
-    width: 100%;
-  }
-  &::after {
-    width: ${({ isActive }) => (isActive ? '100%' : 0)};
-  }
-  svg, img {
-    margin-right: 16px;
-  }
+  ${({ shouldHighlight }) =>
+    shouldHighlight
+      ? `
+      &:hover::after {
+        width: 100%;
+      }
+      &::after {
+        width: ${({ isActive }) => (isActive ? '100%' : 0)};
+      }
+      `
+      : ''}
 `
 export default NavButton
