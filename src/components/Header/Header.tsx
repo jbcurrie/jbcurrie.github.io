@@ -29,12 +29,12 @@ const Header: FC<HeaderProps> = ({ className }) => {
       entries: IntersectionObserverEntry[],
     ) => {
       entries.forEach((entry) => {
+        console.log(entry)
         target.style.opacity = String(entry.intersectionRatio < .9 ? entry.intersectionRatio: 1)
       })
     }
     const observer = new IntersectionObserver(callback, options)
     observer.observe(target)
-    return (observer.unobserve(target))
   })
   return (
     <header className={className}>
