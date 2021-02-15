@@ -20,7 +20,10 @@ const HeroCard: FC<HeroCardProps> = ({
       <H1>{title}</H1>
       <H2>{subtitle}</H2>
       {children}
-      <Button.Primary size={Sizes.large} onClick={(e) => router.push('#contact')}>
+      <Button.Primary
+        size={Sizes.large}
+        onClick={(e) => router.push('#contact')}
+      >
         <H2>Contact Me</H2>
       </Button.Primary>
     </div>
