@@ -11,6 +11,7 @@ function Home({ className }) {
   return (
     <div className={className}>
       <Navbar />
+      <div id={'intersection'} style={{position: 'sticky'}}/>
       <main>
       <Wrapper id={'home'} >
         <Header />
