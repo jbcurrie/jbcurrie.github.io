@@ -5,7 +5,7 @@ import { useEffect } from 'react'
 import { Header } from '../components/Header'
 import HeroCard from '../components/Header/HeroCard'
 import { Navbar } from '../components/Navbar'
-import { Text } from '../lib'
+import { ImageHeader, Text } from '../lib'
 
 function Home({ className }) {
   return (
@@ -13,7 +13,7 @@ function Home({ className }) {
       <Navbar />
       <div id={'intersection'} style={{position: 'sticky'}}/>
       <main>
-      <Wrapper id={'home'} >
+      <Wrapper id={'home'} css={css`flex-direction: row;`}>
         <Header />
         <HeroCard title={'Jonathan Currie'} subtitle={'Software Developer'}>
           <Text.Light>
@@ -23,10 +23,13 @@ function Home({ className }) {
           </Text.Light>
         </HeroCard>
       </Wrapper>
-      <Wrapper id={'about'}></Wrapper>
+      <Wrapper id={'about'}>
+            <ImageHeader src={'/small_fall.png'}/>
+      </Wrapper>
       <Wrapper id={'portfolio'}></Wrapper>
       <Wrapper id={'contact'}></Wrapper>
       </main>
+      <div id={'header-intersection'} style={{position: 'fixed', bottom: 'calc(100vh - 80%)'}}/>
     </div>
   )
 }
@@ -41,6 +44,7 @@ export const Wrapper = styled.div`
   height: calc(100vh - 60px);
   position: relative;
   display: flex;
+  flex-direction: column;
   ${({theme}) => `
     ${theme.mq.small} {
       flex-direction: column;
